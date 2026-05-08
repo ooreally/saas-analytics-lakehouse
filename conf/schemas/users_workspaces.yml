@@ -1,0 +1,34 @@
+{
+  "entity": "users_workspaces",
+  "primary_key": ["user_id"],
+  "timestamp_columns": [],
+  "required_columns": [
+    "user_id",
+    "email",
+    "full_name",
+    "workspace_id",
+    "workspace_name",
+    "role",
+    "region",
+    "acquisition_channel",
+    "signup_date"
+  ],
+  "enums": {
+    "role": ["admin", "owner", "editor", "analyst"],
+    "region": ["APAC", "EMEA", "NA"],
+    "is_enterprise": ["true", "false"]
+  },
+  "columns": [
+    { "name": "user_id", "type": "string", "description": "Stable user identifier" },
+    { "name": "email", "type": "string", "description": "User email", "pii": true },
+    { "name": "full_name", "type": "string", "description": "User full name", "pii": true },
+    { "name": "workspace_id", "type": "string", "description": "Workspace identifier" },
+    { "name": "workspace_name", "type": "string", "description": "Workspace display name" },
+    { "name": "role", "type": "string", "description": "Role in the workspace" },
+    { "name": "region", "type": "string", "description": "Primary region" },
+    { "name": "acquisition_channel", "type": "string", "description": "Primary acquisition source" },
+    { "name": "signup_date", "type": "date", "description": "User signup date" },
+    { "name": "is_enterprise", "type": "boolean", "description": "Workspace enterprise flag" }
+  ]
+}
+

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="280" viewBox="0 0 980 280">
+  <style>
+    .title { font: 700 22px Arial, sans-serif; fill: #0f172a; }
+    .mono { font: 14px 'Courier New', monospace; fill: #e2e8f0; }
+    .head { font: 700 14px 'Courier New', monospace; fill: #f8fafc; }
+  </style>
+  <rect width="980" height="280" fill="#0f172a" rx="12" />
+  <text x="28" y="36" class="title" fill="#f8fafc">gold_daily_product_metrics</text>
+  <text x="28" y="78" class="head">metric_date   active_users  active_workspaces  publish_events  paid_workspaces  monthly_recurring_revenue</text>
+  <text x="28" y="114" class="mono">2026-03-01    5             3                  0               2                4799</text>
+  <text x="28" y="144" class="mono">2026-03-02    2             1                  1               2                4799</text>
+  <text x="28" y="174" class="mono">2026-03-03    2             1                  1               2                4799</text>
+  <text x="28" y="204" class="mono">2026-03-05    4             2                  1               4                5597</text>
+</svg>
+

@@ -1,0 +1,32 @@
+{
+  "entity": "support_feedback",
+  "primary_key": ["ticket_id"],
+  "timestamp_columns": ["created_at"],
+  "required_columns": [
+    "ticket_id",
+    "created_at",
+    "user_id",
+    "workspace_id",
+    "product_area",
+    "priority",
+    "resolution_status",
+    "feedback_text"
+  ],
+  "enums": {
+    "priority": ["low", "medium", "high"],
+    "resolution_status": ["open", "resolved", "escalated"],
+    "product_area": ["editor", "billing", "collaboration", "onboarding", "analytics"]
+  },
+  "columns": [
+    { "name": "ticket_id", "type": "string", "description": "Ticket identifier" },
+    { "name": "created_at", "type": "timestamp", "description": "Ticket creation timestamp" },
+    { "name": "user_id", "type": "string", "description": "Submitting user" },
+    { "name": "workspace_id", "type": "string", "description": "Workspace related to the issue" },
+    { "name": "product_area", "type": "string", "description": "Product area tied to the issue" },
+    { "name": "priority", "type": "string", "description": "Ticket priority" },
+    { "name": "resolution_status", "type": "string", "description": "Current resolution state" },
+    { "name": "feedback_text", "type": "string", "description": "Main support ticket body" },
+    { "name": "user_comment", "type": "string", "description": "Optional follow-up comment" }
+  ]
+}
+

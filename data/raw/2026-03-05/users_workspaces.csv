@@ -1,0 +1,5 @@
+user_id,email,full_name,workspace_id,workspace_name,role,region,acquisition_channel,signup_date,is_enterprise
+U003,chris@designops.ai,Chris Iyer,W002,Design Ops Lab,owner,EMEA,paid_search,2026-02-27,false
+U006,farah@creativegrowth.io,Farah Khan,W004,Creative Growth,admin,APAC,webinar,2026-03-05,false
+U007,gaurav@creativegrowth.io,Gaurav Nair,W004,Creative Growth,editor,APAC,webinar,2026-03-05,false
+

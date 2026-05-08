@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="260" viewBox="0 0 980 260">
+  <style>
+    .title { font: 700 22px Arial, sans-serif; fill: #0f172a; }
+    .mono { font: 14px 'Courier New', monospace; fill: #ecfccb; }
+    .warn { font: 14px 'Courier New', monospace; fill: #fca5a5; }
+  </style>
+  <rect width="980" height="260" fill="#052e16" rx="12" />
+  <text x="28" y="36" class="title" fill="#f8fafc">quality_validation_summary</text>
+  <text x="28" y="78" class="mono">PASS  silver_users_workspaces.primary_key_uniqueness     duplicate_count=0</text>
+  <text x="28" y="108" class="mono">PASS  silver_subscriptions.plan_tier_enum                invalid_count=0</text>
+  <text x="28" y="138" class="warn">WARN  bronze_app_events.invalid_event_name               quarantined_rows=1</text>
+  <text x="28" y="168" class="mono">PASS  gold_daily_product_metrics.metric_reconciliation   publish_events_match=true</text>
+  <text x="28" y="198" class="mono">PASS  silver_support_feedback_enriched.null_summary      null_count=0</text>
+</svg>

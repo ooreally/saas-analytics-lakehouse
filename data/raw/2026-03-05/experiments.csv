@@ -1,0 +1,5 @@
+experiment_id,workspace_id,user_id,experiment_name,variant,assigned_at
+EXP001,W002,U003,smart_generate_prompting,variant_a,2026-03-05T08:00:00Z
+EXP003,W004,U006,express_publish_flow,control,2026-03-05T08:10:00Z
+EXP003,W004,U007,express_publish_flow,variant_a,2026-03-05T08:12:00Z
+

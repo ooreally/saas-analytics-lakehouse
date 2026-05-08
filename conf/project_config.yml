@@ -1,0 +1,34 @@
+{
+  "project_name": "creative_saas_analytics_platform",
+  "catalog": "main",
+  "database_prefix": "creative_saas_analytics",
+  "layers": {
+    "bronze": "bronze",
+    "silver": "silver",
+    "gold": "gold",
+    "ops": "ops",
+    "quarantine": "quarantine"
+  },
+  "paths": {
+    "raw_root": "data/raw",
+    "docs_root": "docs",
+    "exports_root": "docs/generated"
+  },
+  "table_prefix": "creative",
+  "batch_window_days": 7,
+  "feature_flags": {
+    "llm_enabled": true,
+    "llm_provider": "mock",
+    "quarantine_enabled": true,
+    "external_llm_base_url": "",
+    "external_llm_api_key_env": "EXTERNAL_LLM_API_KEY"
+  },
+  "gold_tables": [
+    "gold_daily_product_metrics",
+    "gold_activation_funnel",
+    "gold_feature_adoption",
+    "gold_workspace_retention",
+    "gold_experiment_readout",
+    "gold_support_topic_trends"
+  ]
+}

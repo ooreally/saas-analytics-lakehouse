@@ -1,0 +1,6 @@
+ticket_id,created_at,user_id,workspace_id,product_area,priority,resolution_status,feedback_text,user_comment
+T001,2026-03-01T13:00:00Z,U001,W001,editor,medium,resolved,"Asset generation was slow for large PSD files.","Please improve latency."
+T002,2026-03-01T14:00:00Z,U003,W002,billing,high,open,"Trial workspace could not upgrade after adding a card.","Billing page kept failing."
+T003,2026-03-02T09:00:00Z,U004,W003,collaboration,low,resolved,"Invite collaborator flow was intuitive and fast.","Happy with the new modal."
+T004,2026-03-02T10:15:00Z,U005,W003,editor,medium,open,"Publish confirmation felt unclear for shared projects.","Need clearer success state."
+

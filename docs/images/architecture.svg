@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420">
+  <style>
+    .title { font: 700 24px Arial, sans-serif; fill: #0f172a; }
+    .label { font: 600 16px Arial, sans-serif; fill: #0f172a; }
+    .small { font: 400 13px Arial, sans-serif; fill: #334155; }
+    .box { stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #1d4ed8; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1d4ed8" />
+    </marker>
+  </defs>
+  <text x="30" y="40" class="title">Creative SaaS Analytics Lakehouse Architecture</text>
+
+  <rect x="30" y="90" width="210" height="170" class="box" fill="#eff6ff" />
+  <text x="50" y="125" class="label">Synthetic Raw Drops</text>
+  <text x="50" y="155" class="small">app_events</text>
+  <text x="50" y="180" class="small">users_workspaces</text>
+  <text x="50" y="205" class="small">subscriptions</text>
+  <text x="50" y="230" class="small">experiments</text>
+  <text x="50" y="255" class="small">support_feedback</text>
+
+  <rect x="295" y="90" width="190" height="90" class="box" fill="#dbeafe" />
+  <text x="320" y="125" class="label">Bronze Delta</text>
+  <text x="320" y="155" class="small">Raw rows + ingestion metadata</text>
+
+  <rect x="295" y="220" width="190" height="90" class="box" fill="#bfdbfe" />
+  <text x="320" y="255" class="label">Quarantine</text>
+  <text x="320" y="285" class="small">Invalid enums, nulls, bad contracts</text>
+
+  <rect x="540" y="90" width="190" height="90" class="box" fill="#dbeafe" />
+  <text x="565" y="125" class="label">Silver Delta</text>
+  <text x="565" y="155" class="small">Validated, deduped, masked entities</text>
+
+  <rect x="540" y="220" width="190" height="90" class="box" fill="#e0f2fe" />
+  <text x="565" y="255" class="label">LLM Enrichment</text>
+  <text x="565" y="285" class="small">Mock or external text classifier</text>
+
+  <rect x="785" y="90" width="165" height="110" class="box" fill="#dcfce7" />
+  <text x="808" y="125" class="label">Gold Marts</text>
+  <text x="808" y="155" class="small">activation</text>
+  <text x="808" y="180" class="small">retention</text>
+  <text x="808" y="205" class="small">experiments</text>
+
+  <rect x="785" y="240" width="165" height="90" class="box" fill="#ecfccb" />
+  <text x="812" y="275" class="label">Ops Tables</text>
+  <text x="812" y="305" class="small">audit + quality results</text>
+
+  <path d="M240 145 L295 135" class="arrow" />
+  <path d="M390 180 L390 220" class="arrow" />
+  <path d="M485 135 L540 135" class="arrow" />
+  <path d="M635 180 L635 220" class="arrow" />
+  <path d="M730 135 L785 145" class="arrow" />
+  <path d="M730 265 L785 285" class="arrow" />
+</svg>

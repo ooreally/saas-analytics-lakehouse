@@ -1,0 +1,4 @@
+event_id,event_ts,user_id,workspace_id,event_name,project_id,asset_type,experiment_id,event_value
+E025,2026-03-03T07:50:00Z,U005,W003,generate_asset,P300,image,EXP002,2
+E026,2026-03-03T08:10:00Z,U005,W003,publish,P300,image,EXP002,1
+

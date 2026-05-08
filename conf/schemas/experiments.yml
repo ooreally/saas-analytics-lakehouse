@@ -1,0 +1,25 @@
+{
+  "entity": "experiments",
+  "primary_key": ["experiment_id", "user_id"],
+  "timestamp_columns": ["assigned_at"],
+  "required_columns": [
+    "experiment_id",
+    "workspace_id",
+    "user_id",
+    "experiment_name",
+    "variant",
+    "assigned_at"
+  ],
+  "enums": {
+    "variant": ["control", "variant_a", "variant_b"]
+  },
+  "columns": [
+    { "name": "experiment_id", "type": "string", "description": "Experiment identifier" },
+    { "name": "workspace_id", "type": "string", "description": "Workspace in the experiment" },
+    { "name": "user_id", "type": "string", "description": "User assigned to the experiment" },
+    { "name": "experiment_name", "type": "string", "description": "Readable experiment name" },
+    { "name": "variant", "type": "string", "description": "Assigned treatment" },
+    { "name": "assigned_at", "type": "timestamp", "description": "Assignment timestamp" }
+  ]
+}
+

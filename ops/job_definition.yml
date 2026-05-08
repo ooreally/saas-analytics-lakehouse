@@ -1,0 +1,64 @@
+resources:
+  jobs:
+    creative_saas_analytics_platform:
+      name: creative-saas-analytics-lakehouse
+      queue:
+        enabled: true
+      parameters:
+        - name: batch_id
+          default: "2026-03-01"
+      tasks:
+        - task_key: setup_workspace
+          notebook_task:
+            notebook_path: ../notebooks/00_setup_workspace.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 900
+        - task_key: bronze_ingestion
+          depends_on:
+            - task_key: setup_workspace
+          notebook_task:
+            notebook_path: ../notebooks/10_bronze_ingestion.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 1800
+        - task_key: silver_transforms
+          depends_on:
+            - task_key: bronze_ingestion
+          notebook_task:
+            notebook_path: ../notebooks/20_silver_transforms.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 1800
+        - task_key: gold_metrics
+          depends_on:
+            - task_key: silver_transforms
+          notebook_task:
+            notebook_path: ../notebooks/30_gold_metrics.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 1800
+        - task_key: llm_enrichment
+          depends_on:
+            - task_key: gold_metrics
+          notebook_task:
+            notebook_path: ../notebooks/40_llm_enrichment.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 1200
+        - task_key: quality_validation
+          depends_on:
+            - task_key: llm_enrichment
+          notebook_task:
+            notebook_path: ../notebooks/50_quality_validation.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 1200
+        - task_key: export_summary
+          depends_on:
+            - task_key: quality_validation
+          notebook_task:
+            notebook_path: ../notebooks/60_export_summary.py
+            base_parameters:
+              batch_id: "{{job.parameters.batch_id}}"
+          timeout_seconds: 900

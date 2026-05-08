@@ -1,0 +1,30 @@
+{
+  "entity": "app_events",
+  "primary_key": ["event_id"],
+  "timestamp_columns": ["event_ts"],
+  "required_columns": ["event_id", "event_ts", "user_id", "workspace_id", "event_name"],
+  "enums": {
+    "event_name": [
+      "signup",
+      "login",
+      "create_project",
+      "upload_asset",
+      "generate_asset",
+      "invite_collaborator",
+      "publish"
+    ],
+    "asset_type": ["", "image", "video", "document"]
+  },
+  "columns": [
+    { "name": "event_id", "type": "string", "description": "Stable event identifier" },
+    { "name": "event_ts", "type": "timestamp", "description": "Event timestamp in UTC" },
+    { "name": "user_id", "type": "string", "description": "User emitting the event" },
+    { "name": "workspace_id", "type": "string", "description": "Workspace context for the event" },
+    { "name": "event_name", "type": "string", "description": "Canonical product event name" },
+    { "name": "project_id", "type": "string", "description": "Project touched by the event" },
+    { "name": "asset_type", "type": "string", "description": "Optional asset type for media events" },
+    { "name": "experiment_id", "type": "string", "description": "Experiment tied to the user session" },
+    { "name": "event_value", "type": "integer", "description": "Numeric event payload such as asset count" }
+  ]
+}
+

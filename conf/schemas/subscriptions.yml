@@ -1,0 +1,30 @@
+{
+  "entity": "subscriptions",
+  "primary_key": ["subscription_id"],
+  "timestamp_columns": [],
+  "required_columns": [
+    "subscription_id",
+    "workspace_id",
+    "plan_tier",
+    "status",
+    "seats",
+    "start_date",
+    "renewal_date",
+    "monthly_recurring_revenue"
+  ],
+  "enums": {
+    "plan_tier": ["starter", "professional", "enterprise", "trial"],
+    "status": ["active", "past_due", "cancelled"]
+  },
+  "columns": [
+    { "name": "subscription_id", "type": "string", "description": "Subscription identifier" },
+    { "name": "workspace_id", "type": "string", "description": "Workspace linked to the plan" },
+    { "name": "plan_tier", "type": "string", "description": "Canonical plan tier" },
+    { "name": "status", "type": "string", "description": "Billing status" },
+    { "name": "seats", "type": "integer", "description": "Seats purchased" },
+    { "name": "start_date", "type": "date", "description": "Subscription start date" },
+    { "name": "renewal_date", "type": "date", "description": "Renewal date" },
+    { "name": "monthly_recurring_revenue", "type": "integer", "description": "Monthly recurring revenue in USD" }
+  ]
+}
+

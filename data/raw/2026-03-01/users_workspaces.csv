@@ -1,0 +1,7 @@
+user_id,email,full_name,workspace_id,workspace_name,role,region,acquisition_channel,signup_date,is_enterprise
+U001,alice@creativestudio.io,Alice Rao,W001,Creative Studio,admin,APAC,organic,2026-02-25,false
+U002,bob@creativestudio.io,Bob Singh,W001,Creative Studio,editor,APAC,organic,2026-02-25,false
+U003,chris@designops.ai,Chris Iyer,W002,Design Ops Lab,admin,EMEA,paid_search,2026-02-27,false
+U004,dina@brandforge.co,Dina Mehta,W003,Brand Forge,admin,NA,partner,2026-02-28,true
+U005,evan@brandforge.co,Evan Das,W003,Brand Forge,analyst,NA,partner,2026-03-01,true
+

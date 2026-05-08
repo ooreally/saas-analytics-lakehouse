@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="240" viewBox="0 0 980 240">
+  <style>
+    .title { font: 700 24px Arial, sans-serif; fill: #0f172a; }
+    .label { font: 600 14px Arial, sans-serif; fill: #0f172a; }
+    .small { font: 400 12px Arial, sans-serif; fill: #334155; }
+    .node { stroke: #0f766e; stroke-width: 2; rx: 12; fill: #ecfeff; }
+    .arrow { stroke: #0f766e; stroke-width: 3; fill: none; marker-end: url(#dag-arrow); }
+  </style>
+  <defs>
+    <marker id="dag-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e" />
+    </marker>
+  </defs>
+  <text x="30" y="36" class="title">Lakeflow Job Task Order</text>
+
+  <rect x="25" y="90" width="120" height="75" class="node" />
+  <text x="47" y="120" class="label">00 Setup</text>
+  <text x="47" y="142" class="small">schemas + ops tables</text>
+
+  <rect x="165" y="90" width="120" height="75" class="node" />
+  <text x="185" y="120" class="label">10 Bronze</text>
+  <text x="185" y="142" class="small">ingest raw drops</text>
+
+  <rect x="305" y="90" width="120" height="75" class="node" />
+  <text x="325" y="120" class="label">20 Silver</text>
+  <text x="325" y="142" class="small">validate + dedupe</text>
+
+  <rect x="445" y="90" width="120" height="75" class="node" />
+  <text x="468" y="120" class="label">30 Gold</text>
+  <text x="468" y="142" class="small">analytics marts</text>
+
+  <rect x="585" y="90" width="120" height="75" class="node" />
+  <text x="603" y="120" class="label">40 LLM</text>
+  <text x="603" y="142" class="small">ticket enrichment</text>
+
+  <rect x="725" y="90" width="120" height="75" class="node" />
+  <text x="737" y="120" class="label">50 Quality</text>
+  <text x="737" y="142" class="small">nulls, enums, PKs</text>
+
+  <rect x="865" y="90" width="95" height="75" class="node" />
+  <text x="878" y="120" class="label">60 Export</text>
+  <text x="878" y="142" class="small">summary views</text>
+
+  <path d="M145 127 L165 127" class="arrow" />
+  <path d="M285 127 L305 127" class="arrow" />
+  <path d="M425 127 L445 127" class="arrow" />
+  <path d="M565 127 L585 127" class="arrow" />
+  <path d="M705 127 L725 127" class="arrow" />
+  <path d="M845 127 L865 127" class="arrow" />
+</svg>
+

@@ -1,0 +1,4 @@
+ticket_id,created_at,user_id,workspace_id,product_area,priority,resolution_status,feedback_text,user_comment
+T002,2026-03-01T14:00:00Z,U003,W002,billing,high,resolved,"Trial workspace could not upgrade after adding a card.","Support manually fixed the billing issue."
+T008,2026-03-03T12:30:00Z,U002,W001,editor,high,resolved,"Collaboration comments disappeared after refresh.","Issue resolved after retry but felt unreliable."
+

@@ -1,0 +1,4 @@
+subscription_id,workspace_id,plan_tier,status,seats,start_date,renewal_date,monthly_recurring_revenue
+S002,W002,professional,active,15,2026-03-05,2026-04-05,799
+S004,W004,starter,active,8,2026-03-05,2026-04-05,299
+

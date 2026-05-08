@@ -1,0 +1,13 @@
+event_id,event_ts,user_id,workspace_id,event_name,project_id,asset_type,experiment_id,event_value
+E016,2026-03-05T08:15:00Z,U003,W002,upload_asset,P200,image,EXP001,2
+E017,2026-03-05T08:30:00Z,U003,W002,generate_asset,P200,image,EXP001,4
+E018,2026-03-05T08:45:00Z,U003,W002,publish,P200,image,EXP001,1
+E019,2026-03-05T09:00:00Z,U006,W004,signup,,,EXP003,1
+E020,2026-03-05T09:05:00Z,U006,W004,create_project,P400,,EXP003,1
+E021,2026-03-05T09:20:00Z,U006,W004,upload_asset,P400,image,EXP003,2
+E022,2026-03-05T09:30:00Z,U007,W004,signup,,,EXP003,1
+E023,2026-03-05T09:40:00Z,U007,W004,create_project,P401,,EXP003,1
+E024,2026-03-05T09:55:00Z,U007,W004,generate_asset,P401,video,EXP003,3
+E024,2026-03-05T09:55:00Z,U007,W004,generate_asset,P401,video,EXP003,3
+E099,2026-03-05T10:05:00Z,U007,W004,download_export,P401,video,EXP003,1
+

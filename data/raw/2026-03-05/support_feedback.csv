@@ -1,0 +1,5 @@
+ticket_id,created_at,user_id,workspace_id,product_area,priority,resolution_status,feedback_text,user_comment
+T005,2026-03-05T11:00:00Z,U003,W002,analytics,high,open,"After upgrading, the publish analytics dashboard was blank.","Looks like a post-upgrade bug."
+T006,2026-03-05T11:20:00Z,U006,W004,onboarding,medium,resolved,"Getting started checklist helped our team onboard quickly.","Good first-run experience."
+T007,2026-03-05T11:45:00Z,U007,W004,editor,low,open,"Generate asset prompt suggestions were useful.","Would like more templates."
+
